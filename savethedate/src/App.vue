@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class = 'row'>
+      <div class = 'col-sm-7'>
+      </div>
+      <div class = 'col-sm-5'>
+        <login></login>
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import login from "./components/login.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    login
   }
 };
 </script>
@@ -23,6 +28,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height:100vh;
+  background-image:url('assets/background.png');
+  background-size: 100% auto;
 }
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
+
 </style>
