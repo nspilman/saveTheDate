@@ -4,20 +4,26 @@
       <div class = 'col-sm-7'>
       </div>
       <div class = 'col-sm-5'>
-        <login></login>
+        <entry-form></entry-form>
         </div>
     </div>
   </div>
 </template>
 
 <script>
-import login from "./components/login.vue";
+import entryForm from "./components/entryForm.vue";
 
 export default {
   name: "app",
   components: {
-    login
-  }
+    entryForm
+  },
+  data:
+    function(){
+      return {
+        item:'data'
+      }
+    }
 };
 </script>
 

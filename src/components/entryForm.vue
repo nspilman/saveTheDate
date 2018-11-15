@@ -1,13 +1,19 @@
 <template>
     <div class ='main text-center'>
         <h1>Save the Date</h1>
+        <login-form></login-form>
         </div>
 </template>
 
 
 <script>
+import loginForm from "./loginForm.vue";
+
 export default {
   name: "login",
+  components:{ 
+      loginForm
+  },
   props: {
     msg: String
   }
@@ -17,6 +23,7 @@ export default {
 <style>
 h1 {
     color:white !important;
+    font-size:100em;
 }
 
 .main{
@@ -25,7 +32,6 @@ h1 {
     height:100vh;
     flex-direction: column;
     align-content: center;
-    font-size:100em;
 }
 
 </style>
