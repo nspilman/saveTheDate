@@ -1,17 +1,21 @@
+
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <template>
   <div id="app">
     <div class = 'row'>
       <div class = 'col-sm-7'>
       </div>
       <div class = 'col-sm-5'>
-        <entry-form></entry-form>
+        <entry-form v-on:login="loggedIn" :loginStatus="loginStatus"></entry-form>
         </div>
+        <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
 import entryForm from "./components/entryForm.vue";
+
 
 export default {
   name: "app",
@@ -21,7 +25,13 @@ export default {
   data:
     function(){
       return {
-        item:'data'
+        item:'data',
+        loginStatus: false
+      }
+    },
+    methods:{
+      loggedIn(){
+        this.loginStatus = true
       }
     }
 };
