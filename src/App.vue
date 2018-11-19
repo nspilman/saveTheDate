@@ -1,14 +1,14 @@
 
-<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <template>
-  <div id="app">
+  <div v-bind:style='{ backgroundImage: `url("${backgroundImage}")` }' id="app">
+    
     <div class = 'row'>
       <div class = 'col-sm-7'>
       </div>
       <div class = 'col-sm-5'>
         <entry-form v-on:login="loggedIn" :loginStatus="loginStatus"></entry-form>
-        </div>
-        <router-view></router-view>
+      </div>
+        
     </div>
   </div>
 </template>
@@ -26,14 +26,15 @@ export default {
     function(){
       return {
         item:'data',
-        loginStatus: false
+        loginStatus: false,
+        backgroundImage :"../assets/background.png",
       }
     },
     methods:{
       loggedIn(){
         this.loginStatus = true
       }
-    }
+    },
 };
 </script>
 
@@ -45,7 +46,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   height:100vh;
-  background-image:url('assets/background.png');
   background-size: 100% auto;
 }
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";

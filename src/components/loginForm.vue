@@ -3,7 +3,7 @@
  <input class = 'nameInput'>
  <input class = 'nameInput'>
  <br>
- <button class ='login' @click="login">Submit </button>
+ <router-link to="main" tag="button" active-class="active" class ="login" exact>Submit</router-link>
         </div>
 </template>
 
@@ -29,6 +29,7 @@ h1 {
 
 .login{
     background-color:#BA7857;
+
 }
 
 .nameInput{

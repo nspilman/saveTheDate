@@ -3,7 +3,7 @@
         <h1> July 13, 2018 </h1>
         <h2>Madison, Wi </h2>
         <button class = 'menuButton' v-for="button in menuButtons">{{button}}</button>
-        </div>
+    </div>
 </template>
 
 
@@ -21,12 +21,12 @@ export default {
   props: {
      },
   methods:{
-    
-  }
+     
+    },    
 };
 </script>
 
-<style>
+<style scoped>
 h1,h2 {
     color:white !important;
     box-shadow: 1in;
@@ -41,5 +41,8 @@ h1,h2 {
     background-color: #9AA8B3;
 }
 
+#app {
+  background-image:url('../assets/background2.png');
+}
 
 </style>

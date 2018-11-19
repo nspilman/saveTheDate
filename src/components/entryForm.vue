@@ -1,22 +1,16 @@
 <template>
     <div class ='main text-center'>
         <h1>Save the Date</h1>
-        <login-form v-if="loginStatus === false" v-on:login="loggedIn"></login-form>
-        <main-menu v-else></main-menu>
-        </div>
+        <router-view></router-view>
+    </div>
 </template>
 
 
 <script>
-import loginForm from "./loginForm.vue";
-import mainMenu from "./mainMenu.vue";
-
 
 export default {
   name: "login",
   components:{ 
-      loginForm,
-        mainMenu
   },
   props: {
     msg: String,

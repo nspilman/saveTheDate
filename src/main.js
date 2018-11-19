@@ -1,20 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
-
-
-
-
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
-
-const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
-]
+import routes from './routes.js';
 
 const router = new VueRouter({
-  routes // short for `routes: routes`
+  routes, // short for `routes: routes`
+  mode: 'history'
 })
 
 Vue.use(VueRouter)
