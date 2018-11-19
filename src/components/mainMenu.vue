@@ -3,6 +3,7 @@
         <h1> July 13, 2018 </h1>
         <h2>Madison, Wi </h2>
         <button class = 'menuButton' v-for="button in menuButtons">{{button}}</button>
+        <router-link to="/" tag="button" active-class="active" class ="w-100 menuButton" exact>Back to Login</router-link>    
     </div>
 </template>
 
@@ -21,8 +22,13 @@ export default {
   props: {
      },
   methods:{
-     
-    },    
+     menuBg(){
+         this.$emit('menuBg')
+     }
+    }, 
+    created:function(){
+        this.menuBg();
+    }   
 };
 </script>
 

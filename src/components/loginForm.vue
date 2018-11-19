@@ -15,9 +15,12 @@ export default {
     msg: String
   },
   methods:{
-      login(){
-          this.$emit('login')
+      loginBg(){
+          this.$emit('homeBg')
       }
+  },
+  created:function(){
+      this.loginBg()
   }
 };
 </script>
